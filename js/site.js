@@ -1,5 +1,19 @@
-//Call Hello World
+//Get values from the page, start function
+function getVaules(){
+    //Get values
+    let startValue = 
+    //Call generate numbers
 
-function helloWorld(){
-    alert("Hello World!");
+    //Call display numbers
+}
+
+//Generate numbers from start value to the end value, logic function
+
+function generateNumbers(){
+
+}
+
+//Display the numbers and mark even numbers in bold, view function
+function displayNumbers(){
+
 }
