@@ -10,53 +10,50 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
 
     <link href="./css/site.css" rel="stylesheet">
     <link href="./css/prism.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/img/profile.png"
-</head>
+    <link rel="icon" type="image/png" href="/img/profile.png" </head> <body class="d-flex flex-column h-100">
 
-<body class="d-flex flex-column h-100">
-
-<!--Nav section-->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hundo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="app.html">The App</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://github.com/arunpun/Hundo">Git Repo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">About</a>
-                </li>
-            </ul>
+    <!--Nav section-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hundo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="app.html">The App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://github.com/arunpun/Hundo">Git Repo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!--Main section-->
-<main class="flex-shrink-0">
-    <div class="container py-5 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Code for Hundo</h2>
-        <div class="row row-cols-1 row-cols-lg-2">
-            <div class="col-lg-8">
-                <pre class="line-numbers"><code class="language-javascript">
+    <!--Main section-->
+    <main class="flex-shrink-0">
+        <div class="container py-5 px-5 mt-5">
+            <h2 class="border-1 border-bottom border-dark">The Code for Hundo</h2>
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col-lg-8">
+                    <pre class="line-numbers"><code class="language-javascript">
                     //Get values from the page, start function
 function getValues(){
     //Get values
@@ -79,7 +76,7 @@ function getValues(){
 }
 
 //Generate numbers from start value to the end value, logic function
-function generateNumbers(sValue, eValue){ //Brand new variables(parameters)
+function generateNumbers(sValue, eValue){ 
     let numbers = []
 
     //Get all numbers from start to end
@@ -98,65 +95,133 @@ function displayNumbers(numbers){
     //Loop over the array
     numbers.forEach(element => {
         if(element % 2 == 0){
-            templateRows += `<tr><td><strong>${element}</strong></td></tr>`;
+            templateRows += `&lt;tr>&lt;td>&lt;strong>${element}&lt;/strong>&lt;/td>&lt;/tr>`;
         } else {
-            templateRows += `<tr><td>${element}</td></tr>`;
+            templateRows += `&lt;tr>&lt;td>${element}&lt;/td>&lt;/tr>`;
         }
     });
     document.getElementById("results").innerHTML = templateRows;
 }
                 </code></pre>
-            </div>
-            <div class="col-lg-4">
-                <p>The code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of "Hello World!".</p>
-            </div>
-        </div>
-    </div>
-</main>
-
- <!--Footer section-->
- <footer class="footer mt-auto py-3">
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-lg-3 gy-2">
-            <div class="col text-light order-last order-lg-first">
-                <div><span class="text-muted">&copy;2021</span> Arun Pun | punarun@hotmail.com</div>
-            </div>
-            <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
-                <img src="./img/arunpun-white.svg" alt="Arun Pun Logo" height="24">
-            </div>
-            <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
-                <div class="row">
-                    <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                    <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                    <div class="col social"><a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
-
+                </div>
+                <div class="col-lg-4">
+                    <p>The code is structured in three functions, <strong>getValues()</strong>,
+                        <strong>generateNumbers()</strong> &
+                        <strong>displayNumbers()</strong>.</p>
+                    <hr>
+                    <h5>getValues()</h5>
+                    <p>This function is triggered by an event listener
+                        <strong>document.getElementById("btnSubmit").addEventListener("click",
+                            getValues</strong> when the <strong>'Display the Hundo'</strong> button is clicked in
+                        the app page. The function creates two variables, <strong>startValue</strong> and
+                        <strong>endValue</strong>
+                        whose values are
+                        respectively
+                        passed from the input fields using the <strong>document.getElementById().value</strong>
+                        method. These values are then converted to an integer with the
+                        <strong>parseInt()</strong> function. A further type validation is done using a boolean logic in
+                        a if-else statement. This statement uses the <strong>Number.isInteger()</strong> method which
+                        checks if the given argument is a number and returns either True or False. Because we have an
+                        <strong>AND</strong>
+                        gate, the expression requires both of the statements to evaluate to <strong>True</strong> which
+                        executes the next line of code in the block, <strong>generateNumbers(startValue,
+                            endValue)</strong> and <strong>displayNumbers(numbers)</strong>
+                        otherwise the user is alerted with an appropriate message.
+                    </p>
+                    <hr>
+                    <h5>generateNumbers()</h5>
+                    <p>This function takes two parameters which I have defined as <strong>sValue</strong> (start value)
+                        &
+                        <strong>eValue</strong> (endvalue). The purpose of this function is to use these parameters and
+                        generate all the
+                        numbers between them. An empty array called <strong>numbers</strong> is defined at the start of
+                        the function
+                        which will store all of the generated numbers. In a for loop, the starting value,
+                        <strong>i</strong>, is set to
+                        the value of <strong>sValue</strong> which is passed as the argument. Similarly, the value of
+                        the
+                        <strong>endValue</strong> is used for the condition of the for loop
+                        to terminate, i.e. <strong>i <= endValue</strong>. The <strong>i++</strong> increments
+                        the value of <strong>i</strong> until the condition is met. For each loop, the value of
+                        <strong>i</strong>
+                        is stored in the <strong>numbers</strong> array using the array method,
+                        <strong>numbers.push(i)</strong>. The function then returns the array after the loop terminates.
+                    </p>
+                    <hr>
+                    <h5>displayNumbers()</h5>
+                    <p>This function takes the <strong>numbers</strong> array as an argument and defines an empty
+                        string,
+                        <strong>templateRows</strong> which will hold HTML elements, table row and table data.
+                        Now that we have an array of numbers, we can use the method,
+                        <strong>numbers.forEach(element)</strong>
+                        which loops through each elements in the array, in this case the elements are the generated
+                        numbers. In this loop, I have enclosed a if-else statement to check if the number is
+                        <strong>even</strong> using
+                        the <strong>%</strong> operator. This operator returns the remainder hence if the remainder is
+                        0, the
+                        number
+                        is <strong>even</strong> as it is cleanly divisible by 2! With their respective HTML tags,
+                        the loop stores the table row and table data with
+                        each of the numbers in the <strong>templateRows</strong> as strings, <strong>bolding</strong>
+                        all of the
+                        even numbers. This is achieved using template literals,
+                        <strong>`&lt;tr>&lt;td>&lt;strong>${element}&lt;/strong>&lt;/td>&lt;/tr>`</strong>
+                        where <strong>${element}</strong> is dynamically assigned each of the numbers in the array.
+                        Because we now have valid HTML stored in <strong>templateRows</strong>, we can display the
+                        numbers using the <strong>document.getElementById("results").innerHTML = templateRows;</strong>
+                        method via DOM manipulation.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </main>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-</script>
+    <!--Footer section-->
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-3 gy-2">
+                <div class="col text-light order-last order-lg-first">
+                    <div><span class="text-muted">&copy;2021</span> Arun Pun | punarun@hotmail.com</div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
+                    <img src="./img/arunpun-white.svg" alt="Arun Pun Logo" height="24">
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
+                    <div class="row">
+                        <div class="col social"><a href="https://www.linkedin.com/in/arun-pun/" target="_blank"><i
+                                    class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                        <div class="col social"><a href="https://github.com/arunpun" target="_blank"><i
+                                    class="fab fa-github fa-2x"></i></a>
+                        </div>
+                        <div class="col social"><a href="https://www.instagram.com/justarunsthing/" target="_blank"><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                        </div>
 
-<!-- Prism JS -->
-<script src="./js/prism.js"></script>
-<script>
-    Prism.plugins.NormalizeWhitespace.setDefaults({
-        'remove-trailing': true,
-        'remove-indent': true,
-        'left-trim': true,
-        'right-trim': true
-    })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
+    <!-- Prism JS -->
+    <script src="./js/prism.js"></script>
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true
+        })
     </script>
     </body>
-    </html>
 
-    
+</html>
